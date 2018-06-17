@@ -1,0 +1,202 @@
+.text {
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+  text-align: center;
+  padding-left: 10px;
+}
+
+.text-white {
+  color: white;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: auto 990px auto;
+  grid-template-rows: 100px auto 10%;
+  grid-template-areas: ". header-grid ." ". main-grid ." "footer-grid footer-grid footer-grid";
+}
+
+.no-dots {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.heading-nav {
+  grid-area: header-grid;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-areas: "links";
+}
+
+.nav-links {
+  grid-area: links;
+  display: grid;
+  grid-template-columns: auto repeat(5, 100px);
+  grid-template-areas: "game-description" " game-rules" "game-start" "technologies" "authors";
+}
+
+.nav-links-li {
+  justify-content: center;
+  align-items: center;
+}
+
+.container-main {
+  grid-area: main-grid;
+  display: grid;
+  grid-template-rows: repeat(6, auto);
+  grid-column-gap: 10px;
+  grid-template-areas: "about-game" "game-description" "game-rules" "game-start" "technologies" "authors";
+}
+
+.about-game {
+  grid-area: about-game;
+  padding: 120px;
+}
+
+.game-description {
+  display: grid;
+  grid-area: game-description;
+  grid-template-columns: repeat(3, 320px);
+  grid-template-areas: "a b c";
+}
+
+.a {
+  grid-area: a;
+}
+
+.b {
+  grid-area: b;
+}
+
+.c {
+  grid-area: c;
+}
+
+.description-container {
+  display: grid;
+  grid-template-rows: 200px 200px;
+  grid-template-areas: "container-head" "container-body";
+}
+
+.container-head {
+  display: grid;
+  grid-area: container-head;
+}
+
+.container-head > img {
+  display: flex;
+  justify-self: center;
+  object-fit: cover;
+  max-width: 300px;
+  max-height: 200px;
+}
+
+.container-body {
+  display: flex;
+  grid-area: container-body;
+  justify-items: center;
+  align-items: center;
+}
+
+.game-rules {
+  display: grid;
+  grid-area: game-rules;
+  grid-template-columns: 2px repeat(3, 320px);
+  grid-template-areas: "d f g";
+}
+
+.d {
+  grid-area: d;
+}
+
+.d {
+  grid-area: f;
+}
+
+.d {
+  grid-area: g;
+}
+
+.game {
+  display: grid;
+  grid-area: game-start;
+  justify-items: center;
+  align-items: center;
+}
+
+.technologies {
+  display: grid;
+  grid-area: technologies;
+  grid-template-columns: auto 350px auto;
+  grid-template-areas: " . technologies-logo . ";
+}
+
+.technologies-logo {
+  display: grid;
+  grid-area: technologies-logo;
+  grid-template-columns: 100px 100px 100px;
+  grid-template-rows: 100px 100px 100px;
+}
+
+.technologies-logo > img {
+  display: flex;
+  justify-self: center;
+  align-self: center;
+  object-fit: cover;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.nav-links-li > img {
+  display: flex;
+  justify-self: center;
+  align-self: center;
+  object-fit: cover;
+  max-width: 200px;
+  max-height: 100px;
+}
+
+.authors {
+  grid-area: authors;
+  display: grid;
+  grid-template-columns: auto repeat(2, 320px) auto;
+  grid-template-areas: ". h j .";
+}
+
+.h {
+  grid-area: h;
+}
+
+.j {
+  grid-area: j;
+}
+
+.nav-links-li {
+  display: grid;
+  justify-self: center;
+}
+
+.container-footer {
+  grid-area: footer-grid;
+  background: black;
+}
+
+.padding-style {
+  padding: 50px;
+}
+
+input[type=button], input[type=submit], input[type=reset] {
+  background-color: black;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=src/css/main.css.map */
